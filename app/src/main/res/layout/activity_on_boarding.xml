@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="#FFFFFF">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <android.support.v4.view.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/flexibleIndicator"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_above="@+id/login_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp" />
+
+
+        <com.merhold.extensiblepageindicator.ExtensiblePageIndicator
+            android:id="@+id/flexibleIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:indicatorActiveColor="#c0c0c0"
+            app:indicatorInactiveColor="#c0c0c0"
+            app:indicatorRadius="6dp"
+            app:indicatorPadding="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="bottom"
+            android:layout_above="@+id/login_button"
+            android:layout_alignRight="@+id/login_button"
+            android:layout_alignEnd="@+id/login_button" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#006699"
+            android:layout_marginBottom="10dp"
+            android:padding="12dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="PROCEED"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</FrameLayout>

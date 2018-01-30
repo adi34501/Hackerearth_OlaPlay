@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="#F5F5F5"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ad.play.Activity.PlayerActivity">
+
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/thumbnail_song"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/more" />
+
+    <ImageView
+        android:id="@+id/thumbnail_song"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        android:layout_above="@+id/pause"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp" />
+
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        rv_centered="true"
+        android:layout_below="@+id/thumbnail_song">
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_play"
+            android:scaleType="centerCrop"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+    </com.andexert.library.RippleView>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/more2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        rv_centered="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/video_view"
+        android:layout_below="@+id/video_view">
+    <ImageView
+        android:id="@+id/download"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_action_name"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/video_view"
+        android:layout_marginBottom="10dp" />
+    </com.andexert.library.RippleView>
+
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_pause"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/more" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/song_name"
+        android:layout_alignParentTop="true"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/artist_name"
+        android:textColor="#7A7C6E"
+        android:layout_below="@+id/song_name"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>
